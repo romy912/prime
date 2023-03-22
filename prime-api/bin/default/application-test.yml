@@ -1,0 +1,13 @@
+ 
+spring:
+  rest-template:
+    enable: true
+  sql:
+    init:
+      data-locations: classpath:api/data.sql
+      schema-locations: classpath:api/schema.sql
+  jpa:
+    defer-datasource-initialization: true
+
+lombok:
+  addLombokGeneratedAnnotation: true

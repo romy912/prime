@@ -1,0 +1,24 @@
+spring:
+  rest-template:
+    enable: true
+  sql:
+    init:
+      data-locations: classpath:api/data.sql
+      schema-locations: classpath:api/schema.sql
+      
+  datasource:
+    url: jdbc:h2:mem:prime;MODE=MySQL
+    username: prime
+    password: romy
+    driver-class-name: org.h2.Driver
+    generate-unique-name: false
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  session:
+    store-type: jdbc
